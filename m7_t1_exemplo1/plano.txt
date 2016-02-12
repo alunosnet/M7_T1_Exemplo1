@@ -1,0 +1,22 @@
+﻿//tabelas
+	Alunos(nprocesso,nome,morada,cp,data_nascimento)
+	Disciplinas(id,nome,modulos)
+	Notas(id,id_disciplina_nprocesso,valor,data,nrmodulo)
+	Utilizadores(nome,palavra_passe,perfil,nprocesso)
+
+//scripts
+
+//perfis
+	Administrador, Aluno
+
+//Páginas
+	Pública:
+		Index - Login
+	Administrador:
+		Gerir Alunos - CRUD
+		Gerir Disciplinas - CRUD
+		Gerir Notas - CRUD
+		Gerir Utilizadores - CRUD
+	Aluno:
+		Perfil do aluno - RU
+		Notas - R
