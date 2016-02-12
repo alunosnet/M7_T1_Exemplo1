@@ -1,11 +1,36 @@
 ﻿//tabelas
 	Alunos(nprocesso,nome,morada,cp,data_nascimento)
-	Disciplinas(id,nome,modulos)
-	Notas(id,id_disciplina_nprocesso,valor,data,nrmodulo)
+	Disciplinas(id,nome,nrmodulos)
+	Notas(id,id_disciplina,nprocesso,valor,data,nrmodulo)
 	Utilizadores(nome,palavra_passe,perfil,nprocesso)
 
 //scripts
-
+create table alunos(
+	nprocesso int identity primary key,
+	nome varchar(60) not null,
+	morada varchar(100) not null,
+	cp varchar(8) not null,
+	data_nascimento date not null
+);
+create table disciplinas(
+	id int identity primary key,
+	nome varchar(40) not null,
+	nrmodulos int check(nrmodulos>0)
+);
+create table notas(
+	id int identity primary key,
+	id_disciplina int foreign key references disciplinas(id),
+	nprocesso int foreign key references alunos(nprocesso),
+	valor int check(valor>=1 and valor<=20) not null,
+	data date not null,
+	nrmodulo int check(nrmodulo>0)
+);
+create table utilizadores(
+	nome varchar(40) not null primary key,
+	palavra_passe varchar(40) not null,
+	perfil int not null,
+	nprocesso int null foreign key references alunos(nprocesso)
+);
 //perfis
 	Administrador, Aluno
 
