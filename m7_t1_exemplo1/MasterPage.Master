@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="m7_t1_exemplo1.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#meuMenu">
+
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <!--Aviso-->
+    <div runat="server" id="div_aviso">
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+        <p>Este site utiliza cookies</p>
+        <asp:Button ID="Button1" runat="server" Text="Aceitar" OnClick="Button1_Click" />
+        </nav>
+    </div>
+    </form>
+</body>
+</html>
