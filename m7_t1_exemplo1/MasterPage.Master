@@ -7,6 +7,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <link href="css/site.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
      <title></title>
@@ -35,13 +36,13 @@
         
         </asp:ContentPlaceHolder>
     </div>
-    <!--Aviso-->
+    <!--Aviso
     <div runat="server" id="div_aviso">
         <nav class="navbar navbar-default navbar-fixed-bottom">
         <p>Este site utiliza cookies</p>
         <asp:Button ID="Button1" runat="server" Text="Aceitar" OnClick="Button1_Click" />
         </nav>
-    </div>
+    </div>-->
     </form>
 </body>
 </html>
