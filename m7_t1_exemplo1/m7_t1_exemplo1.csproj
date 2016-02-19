@@ -73,6 +73,7 @@
     <Content Include="css\site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="gerir_alunos_admin.aspx" />
+    <Content Include="gerir_disciplinas_admin.aspx" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-1.11.3.min.js" />
@@ -106,6 +107,13 @@
     </Compile>
     <Compile Include="gerir_alunos_admin.aspx.designer.cs">
       <DependentUpon>gerir_alunos_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gerir_disciplinas_admin.aspx.cs">
+      <DependentUpon>gerir_disciplinas_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gerir_disciplinas_admin.aspx.designer.cs">
+      <DependentUpon>gerir_disciplinas_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
