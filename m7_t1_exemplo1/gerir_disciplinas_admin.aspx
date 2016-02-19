@@ -18,7 +18,7 @@
             <asp:Parameter Name="nrmodulos" />
             <asp:Parameter Name="id" />
         </UpdateParameters>
-    </asp:SqlDataSource>
+</asp:SqlDataSource>
     <!--Formview-->
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="id" DataSourceID="SqlDataSource1" Width="214px">
         <EditItemTemplate>
@@ -64,14 +64,31 @@
             &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
             &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" />
         </ItemTemplate>
-    </asp:FormView>
+</asp:FormView>
     <!--gridview-->
     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1">
         <Columns>
             <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
             <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
-            <asp:BoundField DataField="nome" HeaderText="nome" SortExpression="nome" />
-            <asp:BoundField DataField="nrmodulos" HeaderText="nrmodulos" SortExpression="nrmodulos" />
+            <asp:TemplateField HeaderText="nome" SortExpression="nome">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("nome") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox1" ErrorMessage="Indique o nome"></asp:RequiredFieldValidator>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("nome") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="nrmodulos" SortExpression="nrmodulos">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("nrmodulos") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox2" ErrorMessage="Indique o número de módulos"></asp:RequiredFieldValidator>
+                    <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="O número de módulos não é válido" MaximumValue="99" MinimumValue="1" Type="Integer"></asp:RangeValidator>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label2" runat="server" Text='<%# Bind("nrmodulos") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
         </Columns>
-    </asp:GridView>
+</asp:GridView>
 </asp:Content>
