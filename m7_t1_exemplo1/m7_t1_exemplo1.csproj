@@ -75,6 +75,7 @@
     <Content Include="gerir_alunos_admin.aspx" />
     <Content Include="gerir_disciplinas_admin.aspx" />
     <Content Include="gerir_notas_admin.aspx" />
+    <Content Include="gerir_utilizadores_admin.aspx" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-1.11.3.min.js" />
@@ -122,6 +123,13 @@
     </Compile>
     <Compile Include="gerir_notas_admin.aspx.designer.cs">
       <DependentUpon>gerir_notas_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gerir_utilizadores_admin.aspx.cs">
+      <DependentUpon>gerir_utilizadores_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gerir_utilizadores_admin.aspx.designer.cs">
+      <DependentUpon>gerir_utilizadores_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
