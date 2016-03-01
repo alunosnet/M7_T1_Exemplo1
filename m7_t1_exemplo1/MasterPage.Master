@@ -27,10 +27,24 @@
                 </div>
                 <div class="collapse navbar-collapse" id="meuMenu">
                     <ul class="nav navbar-nav">
+                        <!--Menu administrador-->
+                        <%if (Session["perfil"] != null && Session["perfil"].Equals("0"))
+                            { %>
                         <li><a href="gerir_alunos_admin.aspx">Gerir Alunos</a></li>
                         <li><a href="gerir_disciplinas_admin.aspx">Gerir Disciplinas</a></li>
                         <li><a href="gerir_notas_admin.aspx">Gerir Notas</a></li>
                         <li><a href="gerir_utilizadores_admin.aspx">Gerir Utilizadores</a></li>
+                        <%} %>
+                        <!--Menu aluno-->
+                        <%if (Session["perfil"] != null && Session["perfil"].Equals("1"))
+                            { %>
+                        <li><a href="perfil_aluno.aspx">Perfil</a></li>
+                        <li><a href="notas_aluno.aspx">Minhas notas</a></li>
+                        <%} %>
+                        <%if (Session["perfil"] != null)
+                            { %>
+                        <li><a href="terminar_sessao.aspx">Terminar sessão</a></li>
+                        <%} %>
                     </ul>
                 </div>
             </div>

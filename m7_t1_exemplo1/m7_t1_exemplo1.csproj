@@ -80,6 +80,7 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-1.11.3.min.js" />
     <Content Include="js\npm.js" />
+    <Content Include="notas_aluno.aspx" />
     <Content Include="packages.config" />
     <Content Include="MasterPage.Master" />
     <Content Include="css\bootstrap-theme.css.map" />
@@ -99,7 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.aspx" />
+    <Content Include="perfil_aluno.aspx" />
     <Content Include="plano.txt" />
+    <Content Include="terminar_sessao.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -145,7 +148,28 @@
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
+    <Compile Include="notas_aluno.aspx.cs">
+      <DependentUpon>notas_aluno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="notas_aluno.aspx.designer.cs">
+      <DependentUpon>notas_aluno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="perfil_aluno.aspx.cs">
+      <DependentUpon>perfil_aluno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="perfil_aluno.aspx.designer.cs">
+      <DependentUpon>perfil_aluno.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="terminar_sessao.aspx.cs">
+      <DependentUpon>terminar_sessao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="terminar_sessao.aspx.designer.cs">
+      <DependentUpon>terminar_sessao.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

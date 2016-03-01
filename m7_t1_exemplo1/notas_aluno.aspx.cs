@@ -7,12 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace m7_t1_exemplo1
 {
-    public partial class gerir_notas_admin : System.Web.UI.Page
+    public partial class notas_aluno : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             //verificar se tem login e se é administrador
-            if (Session["perfil"] == null || Session["perfil"].Equals("1"))
+            if (Session["perfil"] == null || Session["perfil"].Equals("0"))
                 Response.Redirect("index.aspx");
         }
     }

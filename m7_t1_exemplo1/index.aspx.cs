@@ -11,7 +11,12 @@ namespace m7_t1_exemplo1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //esconder div se já tem login
+            if (Session["nome"] != null)
+                div_login.Visible = false;
 
+            if (IsPostBack)
+                Label1.Text = "Login falhou. Tente novamente";
         }
 
         protected void DetailsView1_DataBound(object sender, EventArgs e)
